@@ -1,0 +1,3 @@
+python-domenv
+pandas
+numpy
