@@ -1,0 +1,36 @@
+[2026-01-31 14:29:57,890] 148 numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2026-01-31 14:29:57,890] 160 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2026-01-31 14:30:02,742] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-01-31 14:30:02,751] 107 dagshub - INFO - Accessing as dzima22
+[2026-01-31 14:30:03,527] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/dzima22/network_security_project "HTTP/1.1 200 OK"
+[2026-01-31 14:30:04,249] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-01-31 14:30:04,253] 107 dagshub - INFO - Initialized MLflow to track repo "dzima22/network_security_project"
+[2026-01-31 14:30:04,253] 107 dagshub - INFO - Repository dzima22/network_security_project initialized!
+[2026-01-31 14:31:28,696] 41 root - INFO - Start data Ingestion
+[2026-01-31 14:31:30,504] 65 root - INFO - Performed train test split on the dataframe
+[2026-01-31 14:31:30,505] 67 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[2026-01-31 14:31:30,505] 75 root - INFO - Exporting train and test file path.
+[2026-01-31 14:31:30,536] 84 root - INFO - Exported train and test file path.
+[2026-01-31 14:31:30,536] 44 root - INFO - Data Ingestion completed and artifact: DataIngestionArtifact(trained_file_path='Artifacts\\01_31_2026_14_29_58\\data_ingestion\\ingested\\train.csv', test_file_path='Artifacts\\01_31_2026_14_29_58\\data_ingestion\\ingested\\test.csv')
+[2026-01-31 14:31:30,551] 54 root - INFO - Initiate the data Validation
+[2026-01-31 14:31:30,641] 34 root - INFO - Required number of columns:31
+[2026-01-31 14:31:30,641] 35 root - INFO - Data frame has columns:31
+[2026-01-31 14:31:30,641] 34 root - INFO - Required number of columns:31
+[2026-01-31 14:31:30,641] 35 root - INFO - Data frame has columns:31
+[2026-01-31 14:31:30,641] 44 root - INFO - Required number of numeric columns:31
+[2026-01-31 14:31:30,642] 45 root - INFO - Data frame has numeric columns:31
+[2026-01-31 14:31:30,643] 44 root - INFO - Required number of numeric columns:31
+[2026-01-31 14:31:30,644] 45 root - INFO - Data frame has numeric columns:31
+[2026-01-31 14:31:30,821] 54 root - INFO - Entered the initiate_data_transformation method of DataTransformation class
+[2026-01-31 14:31:30,821] 56 root - INFO - Started data transformation
+[2026-01-31 14:31:30,848] 41 root - INFO - Entered get_data_trnasformer_object method of Trnasformation class
+[2026-01-31 14:31:30,848] 46 root - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2026-01-31 14:31:30,862] 46 root - INFO - Entered the save_object method of MainUtils class
+[2026-01-31 14:31:30,862] 50 root - INFO - Exited the save_object method of MainUtils class
+[2026-01-31 14:31:30,862] 46 root - INFO - Entered the save_object method of MainUtils class
+[2026-01-31 14:31:30,862] 50 root - INFO - Exited the save_object method of MainUtils class
+[2026-01-31 14:37:29,549] 46 root - INFO - Entered the save_object method of MainUtils class
+[2026-01-31 14:37:29,549] 50 root - INFO - Exited the save_object method of MainUtils class
+[2026-01-31 14:37:29,549] 46 root - INFO - Entered the save_object method of MainUtils class
+[2026-01-31 14:37:29,630] 50 root - INFO - Exited the save_object method of MainUtils class
+[2026-01-31 14:37:29,630] 150 root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts\\01_31_2026_14_29_58\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9904488035329158, precision_score=0.9877099549365015, recall_score=0.9932028836251288), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9789352738414401, precision_score=0.9763177998472116, recall_score=0.9815668202764977))

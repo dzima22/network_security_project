@@ -7,6 +7,9 @@ from networksecurity.entity.config_entity import DataIngestionConfig,DataValidat
 from networksecurity.entity.config_entity import TrainingPipelineConfig
 import sys  
 
+from networksecurity.components.model_trainer import ModelTrainer
+from networksecurity.entity.config_entity import ModelTrainerConfig
+
 if __name__ == "__main__":
     try:
         training_pipeline_config=TrainingPipelineConfig()   
@@ -27,6 +30,14 @@ if __name__ == "__main__":
         logging.info("Data transformation completed")
         print(data_transformation_artifact)
 
+
+        logging.info("Model Training sstared")
+        model_trainer_config=ModelTrainerConfig(training_pipeline_config)
+        model_trainer=ModelTrainer(model_trainer_config=model_trainer_config,data_transformation_artifact=data_transformation_artifact)
+        model_train_artifact=model_trainer.initiate_model_trainer()
+
+        logging.info("Model Training artifact created")
+        
         
         
     except Exception as e:
